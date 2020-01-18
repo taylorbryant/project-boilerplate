@@ -1,17 +1,16 @@
+/* eslint-env node */
 module.exports = {
-  plugins: [
-    require(`postcss-import`),
-    require(`tailwindcss`),
+  plugins: {
+    "postcss-import": {},
+    tailwindcss: {},
     ...(process.env.NODE_ENV === `production`
-      ? [
-          require(`@fullhuman/postcss-purgecss`)({
+      ? {
+          "@fullhuman/postcss-purgecss": {
             content: [`./src/**/*.js`],
-            defaultExtractor: content =>
-              content.match(/[A-Za-z0-9-_:/]+/g) || []
-          }),
-          require(`autoprefixer`),
-          require(`cssnano`)
-        ]
-      : [])
-  ]
+            defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+          },
+          autoprefixer: {}
+        }
+      : {})
+  }
 };

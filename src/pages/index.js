@@ -1,11 +1,9 @@
-import "../css/index.css";
-
 import React from "react";
 
 function Home() {
   return (
-    <main className="bg-indigo-600 flex items-center justify-center min-h-screen text-white">
-      <h1 className="font-black text-6xl tracking-tight">
+    <main className="flex items-center justify-center min-h-screen text-white bg-indigo-600">
+      <h1 className="text-6xl font-black tracking-tight">
         Product Boilerplate
       </h1>
     </main>
