@@ -13,7 +13,7 @@
     "fix": "npm run fix:lint && npm run fix:prettier && npm run fix:import-sort"
   },
   "dependencies": {
-    "next": "9.3.0",
+    "next": "9.3.1",
     "react": "16.13.0",
     "react-dom": "16.13.0"
   },
