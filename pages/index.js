@@ -1,6 +1,6 @@
 import React from "react";
 
-function Home() {
+function IndexPage() {
   return (
     <main className="flex items-center justify-center min-h-screen text-white bg-indigo-600">
       <h1 className="text-6xl font-black tracking-tight">
@@ -10,4 +10,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default IndexPage;

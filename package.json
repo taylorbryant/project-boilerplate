@@ -1,16 +1,17 @@
 {
   "name": "project-boilerplate",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "export": "npm run build && next export",
     "start": "next start",
+    "fix:dependencies": "npm audit fix",
     "fix:import-sort": "import-sort --write '**/*.js'",
     "fix:lint": "eslint --ext .jsx --ext .js . --fix",
     "fix:prettier": "prettier --write '**/*.{js,css,md,mdx}'",
-    "fix": "npm run fix:lint && npm run fix:prettier && npm run fix:import-sort"
+    "fix": "npm run fix:dependencies && npm run fix:lint && npm run fix:prettier && npm run fix:import-sort"
   },
   "dependencies": {
     "next": "9.4.2",
@@ -18,7 +19,6 @@
     "react-dom": "16.13.1"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "2.2.0",
     "autoprefixer": "9.8.0",
     "babel-eslint": "10.1.0",
     "eslint": "6.8.0",
@@ -32,7 +32,6 @@
     "import-sort-parser-babylon": "6.0.0",
     "import-sort-style-module": "6.0.0",
     "lint-staged": "10.2.6",
-    "postcss-import": "12.0.1",
     "prettier": "2.0.5",
     "tailwindcss": "1.4.6"
   },
@@ -42,7 +41,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,css,md,mdx}": "prettier --write",
+    "*.{js,css,md}": "prettier --write",
     "*.js": "eslint --fix"
   }
 }
