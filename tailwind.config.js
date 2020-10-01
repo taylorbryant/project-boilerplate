@@ -1,5 +1,1 @@
-module.exports = {
-  theme: {
-    purge: [`./components/**/*.js`, `./pages/**/*.js`],
-  },
-};
+module.exports = { purge: [`./components/**/*.js`, `./pages/**/*.js`] };
