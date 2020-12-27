@@ -1,6 +1,4 @@
-import React from "react";
-
-function IndexPage() {
+export default function IndexPage(): JSX.Element {
   return (
     <main className="flex items-center justify-center min-h-screen text-white bg-indigo-600">
       <h1 className="text-6xl font-black tracking-tight">
@@ -9,5 +7,3 @@ function IndexPage() {
     </main>
   );
 }
-
-export default IndexPage;
